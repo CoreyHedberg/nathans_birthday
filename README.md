@@ -1,6 +1,6 @@
-# Nathan's 11th Birthday
+# Nathan's Birthday
 
-Website built for my son's 11th birthday.
+Website built for my son's birthday announcements.
 
 ## Languages Used
 
