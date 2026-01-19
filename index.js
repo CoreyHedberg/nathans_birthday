@@ -2,35 +2,35 @@
 
 function countdownToBirthday() {
   // Get today's date and time
-  const NOW = new Date().getTime()
+  const NOW = new Date().getTime();
   // Set the date we're counting down to
-  const BIRTHDAY_DATE = new Date("12.13.2025 24:00:00").getTime()
+  const BIRTHDAY_DATE = new Date("12.19.2026 24:00:00").getTime();
   // Find the distance between now and the count down date
-  const TIME_LEFT = BIRTHDAY_DATE - NOW
+  const TIME_LEFT = BIRTHDAY_DATE - NOW;
   // Addressing what to do when the countdown reaches 0
   if (TIME_LEFT < 0) {
-    countdownToBirthdayCompleted()
+    countdownToBirthdayCompleted();
   }
   // Time calculations for days, hours, minutes and seconds
-  const DAYS = Math.floor(TIME_LEFT / (1000 * 60 * 60 * 24))
+  const DAYS = Math.floor(TIME_LEFT / (1000 * 60 * 60 * 24));
   const HOURS = Math.floor(
-    (TIME_LEFT % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  )
-  const MINUTES = Math.floor((TIME_LEFT % (1000 * 60 * 60)) / (1000 * 60))
-  const SECONDS = Math.floor((TIME_LEFT % (1000 * 60)) / 1000)
+    (TIME_LEFT % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+  );
+  const MINUTES = Math.floor((TIME_LEFT % (1000 * 60 * 60)) / (1000 * 60));
+  const SECONDS = Math.floor((TIME_LEFT % (1000 * 60)) / 1000);
   // Grab the HTML elements and insert the values
-  document.getElementById("days").innerHTML = DAYS
-  document.getElementById("hours").innerHTML = HOURS
-  document.getElementById("minutes").innerHTML = MINUTES
-  document.getElementById("seconds").innerHTML = SECONDS
+  document.getElementById("days").innerHTML = DAYS;
+  document.getElementById("hours").innerHTML = HOURS;
+  document.getElementById("minutes").innerHTML = MINUTES;
+  document.getElementById("seconds").innerHTML = SECONDS;
 }
 
 function countdownToBirthdayCompleted() {
-  clearInterval(countdownToBirthday)
-  document.getElementById("birthday-countdown").style.display = "none"
-  return
+  clearInterval(countdownToBirthday);
+  document.getElementById("birthday-countdown").style.display = "none";
+  return;
 }
 // Initialize the function
-countdownToBirthday()
+countdownToBirthday();
 // Set the count down function to run every 1 second
-setInterval(countdownToBirthday, 1000)
+setInterval(countdownToBirthday, 1000);
