@@ -23,7 +23,10 @@ body {
 .header-text {
   font-family: var(--primary-font);
   font-size: 4rem;
-  text-shadow: 0 0 5px #000, 0 0 10px #00205b, 0 0 15px #00205b;
+  text-shadow:
+    0 0 5px #000,
+    0 0 10px #00205b,
+    0 0 15px #00205b;
 }
 
 .countdown {
